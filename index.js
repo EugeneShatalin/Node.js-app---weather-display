@@ -7,7 +7,7 @@ const app = express() //переменная отвечающая за все п
 app.set('view engine', 'ejs') //поставили по умолчанию файлы ejs
 app.use(express.static('public'))//назначение статического пути проекта
 app.use(bodyParser.urlencoded({extended: true}))
-//1e129d771047b7a7b23be1d44a5365ca
+
 
 //метод get обрабатывает get запрос, первым параметром принимает какой-либо root для обработки
 //вторым параметром колбек функцию с двумя парамерами req - это то что мы отправляем в запросе
@@ -17,10 +17,10 @@ app.get('/', (req, res) => {
 })
 
 //метод post обрабатывает post запрос, все аналогично get методу
-app.post('/', (req, res) => {
+app.post('/', async (req, res) => {
     const { city } = req.body
 
-    wetherRequest(city)
+    const {weather, error} = await wetherRequest(city) //диструктурируем из объекта два нужных нам значения
     res.render('index') //при запросе post на корнивую папку проекта отрисовать index
 })
 
