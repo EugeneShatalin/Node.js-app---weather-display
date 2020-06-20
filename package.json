@@ -1,0 +1,31 @@
+{
+  "name": "js-app-weather-display",
+  "version": "1.0.0",
+  "description": "node.js app weather display",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EugeneShatalin/Node.js-app---weather-display.git"
+  },
+  "keywords": [
+    "node",
+    "node.js",
+    "js",
+    "javascript"
+  ],
+  "author": "Shatalin Yevgeniy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EugeneShatalin/Node.js-app---weather-display/issues"
+  },
+  "homepage": "https://github.com/EugeneShatalin/Node.js-app---weather-display#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
